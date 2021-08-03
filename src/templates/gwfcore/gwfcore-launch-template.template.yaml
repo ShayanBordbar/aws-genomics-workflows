@@ -180,6 +180,9 @@ Resources:
 
               - mkdir -p /opt/aws-cli/bin
               - cp -a $(dirname $(find /usr/local/aws-cli -name 'aws' -type f))/. /opt/aws-cli/bin/
+              - mkdir -p /home/ec2-user/miniconda/bin
+              - cp -a $(dirname $(find /usr/local/aws-cli -name 'aws' -type f))/. /home/ec2-user/miniconda/bin/
+              - alias python=python3
 
               # set environment variables for provisioning
               - export GWFCORE_NAMESPACE=${Namespace}
