@@ -1,5 +1,6 @@
 ARG VERSION=latest
-FROM public.ecr.aws/seqera-labs/nextflow:${VERSION} AS build
+# FROM public.ecr.aws/seqera-labs/nextflow:${VERSION} AS build
+FROM nextflow/nextflow:${VERSION} AS build
 
 # The upstream nextflow containers are based on alpine
 # which are not compatible with the aws cli
